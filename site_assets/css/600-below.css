@@ -162,6 +162,49 @@
 		text-indent: 0;
 		background-image: none;
 	}
+
+	.global-nav .head-east-young-man {
+		float: none;
+		position: static;
+	}
+
+	.global-nav .main-search {
+		padding: 0 12px;
+		background: transparent;
+		border-radius: 0;
+		line-height: 42px;
+		text-align: left;
+	}
+
+	.global-nav .main-search input[type=search] {
+        display: inline-block;
+        vertical-align: middle;
+        width: 80% !important;
+        width: calc(100% - 32px) !important;
+        padding: 3px 1px !important;
+        opacity: 1;
+		background: transparent;
+        font-size: 16px;
+		border-radius: 0;
+    }
+
+    .global-nav .main-search label.submit-search {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 0;
+        width: auto;
+        height: auto;
+        padding: 14px
+        10px 12px 12px;
+        background: #000;
+    }
+
+    .global-nav .main-search label.submit-search
+    input {
+        display: block;
+        visibility: visible;
+        opacity: 1
+    }
 	
 	.killer-logo > a {
 		margin-left: -25%;
@@ -299,7 +342,7 @@
 		margin-right: 18px;
 	}
 	
-	.entry-header .issue-number span, .wide-hero .issue-number span, .tall-hero .issue-number span {
+	.entry-header .issue-number span, .issue-page .logo-holder + .issue-number span, .wide-hero .issue-number span, .tall-hero .issue-number span {
 		width: auto;
 		height: auto;
 		position: static;
@@ -308,7 +351,7 @@
 		font-size:18px;
 	}
 	
-	.entry-header .issue-number, .wide-hero .issue-number, .tall-hero .issue-number {
+	.entry-header .issue-number, .wide-hero .issue-number, .tall-hero .issue-number, .issue-page .logo-holder + .issue-number {
 		left: 0;
 		bottom: 0;
 		width: 100%;
@@ -572,6 +615,12 @@
 		margin-right: 18px;
 		width: auto;
 		max-width: none;
+	}
+	
+	.sponsored .article-layout .blog-header,
+	.article-layout .blog-header {
+		margin-left: 18px;
+		padding-left: 0;
 	}
 	
 	.blog-summary {

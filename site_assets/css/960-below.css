@@ -408,6 +408,11 @@ ol.article-comments > li {
 	padding-right: 0;
 }
 
+.sponsored .article-layout .blog-header,
+.article-layout .blog-header {
+	padding-left: 0;
+}
+
 aside.the-deck,
 aside.job-board {
 	display: block;
@@ -614,5 +619,9 @@ a {
 	/* (for the HTC Desire, and probably other unidentified android devices) */
 	text-rendering: auto;
 }
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> upstream/dev
 }

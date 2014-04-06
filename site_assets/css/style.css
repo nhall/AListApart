@@ -345,7 +345,8 @@ ul.inline-items li {
 .no-touch .main-search:hover input[type=search],
 .no-touch .main-search input[type=search]:valid,
 .no-touch .main-search input[type=search]:focus,
-.open-search input[type=search] {
+.open-search input[type=search],
+.no-js input[type=search] {
 	width: 200px;
 	padding: 3px 9px;
 	opacity: 1;
@@ -1149,6 +1150,11 @@ ul.fancy-links li a.facebook {
 	background: url(../img/icon_facebook2.png) 5px center no-repeat;
 }
 
+ul.fancy-links li a.googleplus {
+	padding-left: 32px;
+	background: url(../img/icon_googleplus.png) 5px center no-repeat;
+}
+
 .article-layout .main-content {
 	width: 960px;
 	max-width: 100%;
@@ -1237,7 +1243,7 @@ ul.fancy-links li a.facebook {
 	overflow: hidden;
 }
 
-.alphabits ul {
+.alphabits ol {
 	position: absolute;
 	top: 0;
 	left: 30px;
@@ -1253,7 +1259,7 @@ ul.fancy-links li a.facebook {
 	-ms-backface-visibility: hidden;
 }
 
-.alphabits ul li {
+.alphabits ol li {
 	display: inline-block;
 }
 
@@ -1541,6 +1547,11 @@ html[data-useragent*='MSIE'] .issue-header time.new:before {
     font-feature-settings: "liga", "dlig", "onum";
 }
 
+.article-layout .main-content > figure.full-width {
+	margin-left: 0;
+	margin-right: 0;
+}
+
 .article-layout .main-content > figure iframe,
 .article-layout .main-content > figure video,
 .article-layout .main-content > figure object,
@@ -1554,6 +1565,11 @@ html[data-useragent*='MSIE'] .issue-header time.new:before {
 .article-layout .main-content > * strong {
 	font-family: "Georgia Pro Semibold";
 	font-weight: normal;
+}
+
+.article-layout .main-content > ol ul {
+	margin: 18px 0;	
+	list-style: disc;
 }
 
 /* why are these !important ? */
@@ -1987,39 +2003,18 @@ html[data-useragent*='Chrome'][data-platform*='Mac'] .article-layout .main-conte
 	border-left: 1px dotted #bfbfbf;
 }
 
-.main-content pre {
-	margin-left: 132px;
-}
-
 .col-holder .main-content pre {
 	margin-left: 0;
 }
 
-.hentry .main-content *[id*="section"]:hover,
-.hentry .main-content *[id*="section"]:target,
+
 .hentry .main-content *[id*="figure"]:hover,
 .hentry .main-content *[id*="figure"]:target,
 .hentry .main-content *[id*="snippet"]:hover,
 .hentry .main-content *[id*="snippet"]:target {
 	position: relative;
-	cursor: default;
 }
 
-.hentry .main-content *[id*="section"]:hover:after,
-.hentry .main-content *[id*="section"]:target:after,
-.hentry .main-content *[id*="figure"]:hover:after,
-.hentry .main-content *[id*="figure"]:target:after,
-.hentry .main-content *[id*="snippet"]:hover:after,
-.hentry .main-content *[id*="snippet"]:target:after {
-	content: "#" attr(id);
-	display: inline-block;
-	vertical-align: middle;
-	padding-left: 12px;
-	color: #ccc;
-	font-size: 12px;
-	line-height: 12px;
-	text-transform: none;
-}
 
 .hentry .main-content *[id*="figure"]:hover:after,
 .hentry .main-content *[id*="figure"]:target:after,
@@ -2031,6 +2026,30 @@ html[data-useragent*='Chrome'][data-platform*='Mac'] .article-layout .main-conte
 	top: 6px;
 	margin-right: 12px;
 	font-family: "Franklin ITC Pro Bold", sans-serif;
+	color: #ccc;
+	font-size: 12px;
+	line-height: 12px;
+	padding-left: 12px;
+	text-transform: none;
+	vertical-align: middle;
+}
+
+.subhead-anchor {
+	color: #ccc;
+	display: none;
+	font-size: 12px;
+	line-height: 12px;
+	padding-left: 12px;
+	text-transform: none;
+	vertical-align: middle;
+}
+
+.hentry .main-content h2:hover .subhead-anchor {
+  display: inline-block;
+}
+
+.subhead-anchor:hover {
+  text-decoration: underline;
 }
 
 .entry-footnotes {
@@ -2227,6 +2246,7 @@ pre.editing code {
 
 .column {
 	display: table-cell;
+	vertical-align: top;
 	width: 50%;
 	padding-right: 24px;
 }
@@ -3058,6 +3078,10 @@ ul.bullets {
 	min-height: 114px;
 }
 
+.more-content .the-deck:first-child {
+	margin-top: 0;
+}
+
 .the-deck .deck-inner {
 	display: table-cell;
 	vertical-align: middle;
@@ -3204,35 +3228,6 @@ body.modal {
 	font-size: 16px;
 }
 
-/*
-html.secret-state body {
-	padding-top: 100px;
-}
-
-html.secret-state .killer-logo {
-	top: 76px;
-	overflow: visible;
-}
-
-html.secret-state .killer-logo:after {
-	content: "";
-	background-image: url(../img/FPO/bearclap.gif);
-	background-size: contain;
-	position: absolute;
-	top: -71px;
-	left: 879px;
-	display: block;
-	height: 73px;
-	width: 67px;
-	overflow: hidden;
-}
-
-html.secret-state .killer-logo > a {
-	margin-top: 0;
-}
-*/
-
-
 /* FOR EMBEDDED GISTS */
 
 .main-content .gist {
@@ -3306,7 +3301,7 @@ html.secret-state .killer-logo > a {
 @media print {
 
 body.printable .global-nav,
-body.printable .share-tools,
+body.printable .propagation-enablers,
 body.printable .post-article,
 body.printable .user-tools,
 body.printable .global-footer .inline-items:not(.copyright),

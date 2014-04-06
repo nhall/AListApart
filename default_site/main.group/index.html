@@ -75,7 +75,7 @@
 		
 					<h2>Columnists</h2>
 			
-					{exp:channel:entries channel="columns" limit="1" status="open" show_future_entries="no"}
+					{exp:channel:entries channel="columns" limit="1" dynamic="no" status="open" show_future_entries="no"}
 			
 					<article class="item-summary article">
 				
@@ -143,7 +143,9 @@
 				
 				--><div class="fixed-column">
 			
-					{ads}
+					{ads}<!--
+					
+					-->{ad-bsa-text}
 				
 				</div>
 			

@@ -3,7 +3,7 @@
 {exp:channel:entries channel="issues" search:issue_number="={segment_2}" dynamic="off" require_entry="yes" show_future_entries="no"}
 
 {if no_results}
-{exp:redirecturl url="http://alistapart.com/articles"}
+{redirect="404"}
 {/if}
 
 {global-page-top}
@@ -100,7 +100,7 @@
 		
 					<h2>Columnists</h2>
 			
-					{exp:channel:entries channel="columns" limit="1" dynamic="no" show_future_entries="no"}
+					{exp:channel:entries channel="columns" limit="1" dynamic="no" status="open" show_future_entries="no"}
 			
 					<article class="item-summary article">
 				
@@ -167,8 +167,6 @@
 				</div><!--
 				
 				--><div class="fixed-column">
-	
-					{sponsor-top}
 			
 					{ads}
 				
@@ -184,7 +182,9 @@
 	
 	</div>
 	
-	{global-nav}
+{global-nav}
+
+{sponsor-top}
 
 {global-footer}
 	
