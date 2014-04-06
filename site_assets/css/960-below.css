@@ -12,7 +12,7 @@
 
 .sponsor-top .sponsor-logo {
 	width: 132px;
-	height: 60px; 
+	height: 60px;
 }
 
 .sponsor-top .sponsor-extended {
@@ -33,7 +33,7 @@
 
 
 body {
-	
+
 }
 
 .global-nav {
@@ -44,7 +44,7 @@ body {
 	position: absolute;
 	right: 6px;
 	top: 0;
- 
+
 	-webkit-backface-visibility: hidden; /* prevents smearing */
 	-moz-backface-visibility: hidden;
 	-ms-backface-visibility: hidden;
@@ -94,7 +94,7 @@ body {
 	margin-right: 0;
 }
 
-.entry-header p, 
+.entry-header p,
 .entry-header h2 {
 	padding: 0;
 }
@@ -176,7 +176,7 @@ body {
 }
 
 .item-summary {
-	width: 33%; 
+	width: 33%;
 	margin-right: 0;
 }
 
@@ -241,10 +241,10 @@ body {
 	/* max-width: 25%; */
 }
 
-.entry-footer h1, 
+.entry-footer h1,
 .entry-footer h2,
 .entry-footer h3,
-.entry-footer .byline .author-bio, 
+.entry-footer .byline .author-bio,
 .entry-footer .byline .author-more {
 	/* margin-left: 25%; */
 	padding-left: 12px;
@@ -262,7 +262,7 @@ body {
 	margin-right: 0;
 }
 
-.author-header h1, 
+.author-header h1,
 .fancy-links {
 	/* padding-left: 12px; */
 }
@@ -288,7 +288,7 @@ body {
 	padding: 24px;
 	border-left: 0;
 	background: #fff;
-	
+
 	-webkit-transition: all 200ms ease-in;
 	-moz-transition: all 200ms ease-in;
 	-o-transition: all 200ms ease-in;
@@ -340,12 +340,12 @@ body {
 	width: auto;
 }
 
-.comment-holder, 
+.comment-holder,
 .more-content {
 	padding-top: 18px;
 }
 
-.comment-holder h1.classy, 
+.comment-holder h1.classy,
 .more-content h1.classy {
 	margin-bottom: 36px;
 }
@@ -360,6 +360,11 @@ ol.article-comments > li {
 	padding: 12px;
 	overflow: hidden;
 }
+
+.edit-comment,
+.embed-comment {
+	margin-left: 0;
+	}
 
 .comment-body {
 	clear: both;
@@ -385,7 +390,7 @@ ol.article-comments > li {
 
 .unequal-columns .column:not(:first-child) {
 	padding-top: 0;
-	border: 0;	
+	border: 0;
 }
 
 .author-header h1, .blog-header h1 {
@@ -436,7 +441,7 @@ aside.job-board {
 
 .the-deck .deck-inner a img {
 	position: static;
-	
+
 }
 
 .global-footer {
@@ -498,7 +503,7 @@ aside.job-board {
 	padding-top: 0;
 }
 
-.home-page .entry-header, 
+.home-page .entry-header,
 .issue-page .entry-header {
 	/* margin-bottom: 24px; */
 	margin-left: 36px;
@@ -584,8 +589,8 @@ aside.job-board {
 }
 
 .partner-promos img {
-	/* float: none; 
-	display: block; 
+	/* float: none;
+	display: block;
 	margin-right: 0;
 	margin-bottom: 6px; */
 }
@@ -609,5 +614,5 @@ a {
 	/* (for the HTC Desire, and probably other unidentified android devices) */
 	text-rendering: auto;
 }
-	
+
 }
